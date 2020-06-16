@@ -48,14 +48,41 @@ $(document).ready(function(){
       //       }
       //   });
 
-  $(window).scroll(function(){                          
-            if ($(this).scrollTop() > 660) {
-                $(".item_paragraph").fadeIn();
+  // $(window).scroll(function(){                          
+  //           if ($(this).scrollTop() > 660) {
+  //               $(".item_paragraph").fadeIn();
 
-            } else {
-              (".item_paragraph").hidden();
-            }
-        });
+  //           } else {
+  //             (".item_paragraph").hidden();
+  //           }
+  //       });
+
+//   const typed = new Typed('.typed', {
+//     strings: 
+//     [
+//     "Venture Kids",
+//     ],
+//     typeSpeed: 50,
+//     backSpeed: 30,
+//     loop: true,
+//     showCursor: true,
+//     loopCount: 1,
+// });
+const instance = new TypeIt(".typed", {
+  // strings: "VentureKids Canada",
+  speed: 75,
+  loop: false,
+  afterComplete: () => {
+    console.log('done?');
+    instance.freeze();
+  }
+}).go();
+
+// const isDone = instance.is('completed');
+// if (isDone) {
+//   console.log('done');
+//   instance.freeze();
+// }
 
 
     $(window).scroll(function(){                          
