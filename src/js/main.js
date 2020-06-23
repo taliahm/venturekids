@@ -1,5 +1,8 @@
 $(document).ready(function(){
-
+  // MOBILE NAV!
+  $('#mobileNav').on('click', () => {
+    $('ul.nav__list').addClass('nav__list-mobile').toggleClass('show');
+  })
 
   $('.testimonial-carousel').slick({
     infinite: true,

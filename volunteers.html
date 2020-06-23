@@ -33,13 +33,16 @@
 <body>
   <div class="page-container">
     <div class="page-content">
-      <main>
-        <nav>
+      <!-- <main> -->
+      <header>
+        <nav class="desktop-nav">
+          <div class="nav__logo-item"><a class="hold-logo-title" href="./index.html"><img src="./assets/images/robot_logo.png" alt="Logo" class="logo" />VentureKids</a></div>
+          <button id="mobileNav"><i class="fas fa-bars"></i>
+            </button>
             <ul class="nav__list">
-              <li class="nav__logo-item"><a class="hold-logo-title" href="./index.html"><img src="./assets/images/robot_logo.png" alt="Logo" class="logo" />VentureKids</a></li>
               <li><a href="./index.html">Home</a></li>
               <li><a href="./programs.html">Programs</a></li>
-              <li><a href="./volunteers.html">About</a></li>
+              <!-- <li><a href="./volunteers.html">About</a></li> -->
               <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9ELHAMLXLL3UW&source=url" class="donate-link" target="_blank">Donate</a></li>
             </ul>
           </nav>
@@ -49,51 +52,47 @@
             <p class="hero__text">We run community-driven workshops for the next generation that tackle product building, financial literacy, growth hacking and coding</p>
           </section>
         </div>
+      </header>
 
-        <div class="partner">
+        <div class="partner about--partner">
           <h3 class="partners__header">Media coverage:</h3>
           <ul class="partner__list">
             <li class="partner__logo-item partner__logo-item--small"><a href="https://www.cbc.ca/" target="_blank"><img src="./assets/images/bw_cbc.png" alt="Logo" class="logo" /></a></li>
-            <li class="partner__logo-item partner__logo-item_northeastern"><a href="https://www.financialpost.ca/"><img src="./assets/images/bw_financialpost.png" alt="Logo" class="logo" /></a></li>
-            <li class="partner__logo-item"><a href="https://www.betakit.com/"><img src="./assets/images/bw_betakit.png" alt="Logo" class="logo" /></a></li>
+            <li class="partner__logo-item partner__logo-item_northeastern"><a href="https://www.financialpost.ca/" target="_blank"><img src="./assets/images/bw_financialpost.png" alt="Logo" class="logo" /></a></li>
+            <li class="partner__logo-item"><a href="https://www.betakit.com/" target="_blank"><img src="./assets/images/bw_betakit.png" alt="Logo" class="logo" /></a></li>
           </ul>
       </div>
 
-      <main class="program-page">
+      <section class="program-page diagonal">
       <div class="content-wrap">
-        <span>
+        <!-- <span> -->
         <h2>Why our work matters</h2>
         <p class="program_headline">We provide free services to in-need communities</p>
-         <p class="program_descriptions">Tech companies control almost every part of our daily life, from how we communicate to where we travel and, even, how we buy our groceries. Diversity isn't just important for the tech itself—-it's important for the people who make and use technology.</p>
-<!--           <p class="program_descriptions">Tech companies control almost every part of our daily life, from how we communicate to the ways in which we travel and, even, how we buy our groceries. Their power is seemingly infinite, which is all the reason more why they must make a concerted effort to champion diverse voices from within. Diversity isn't just important for the tech itself—-it's important for the people who make and use technology.</p> -->
-
-      </span>
+         <p class="program_descriptions volunteer_descriptions">Tech companies control almost every part of our daily life, from how we communicate to where we travel and, even, how we buy our groceries. Diversity isn't just important for the tech itself—-it's important for the people who make and use technology.</p>
+      <!-- </span> -->
     </div>
-  </main>
-   <main class="program-page">
+  </section>
+   <section class="program-page volunteer-section">
       <div class="content-wrap">
-        <span>
+        <!-- <span> -->
         <h2>What makes us different?</h2>
         <p class="program_headline">There's no better time than now to volunteer</p>
 
 
       <div class="program_group_new">
-            <p class="program_descriptions"> Whether you want to make a difference in your community, inspire the next generation or simply help where help is needed, our volunteers and corporate partners are as diverse as the students we help. If you're interested in learning more about VentureKids, working with us as a sponsor, mentor or team member, please reach out.</p>  
-<!--             <p class="program_descriptions">Tech companies control almost every part of our daily life, from how we communicate to the ways in which we <span class="hl1"> travel and, even, how we buy our groceries. </span>Their power is seemingly infinite, which is all the reason more why they must make a concerted effort to champion diverse voices from within. Diversity isn't just important for the tech itself—-it's important for the people who make and use technology.</p>    -->        
+            <p class="program_descriptions volunteer-descriptions"> Whether you want to make a difference in your community, inspire the next generation or simply help where help is needed, our volunteers and corporate partners are as diverse as the students we help. If you're interested in learning more about VentureKids, working with us as a sponsor, mentor or team member, please reach out.</p>        
           </div>
-                  </span>
-                </span>
             </div>
-            </main>
-          </main>
+          </section>
         </div>
       </div>
 
-    <main class="signup">
+    <section class="signup signup-volunteer diagonal-up">
+      <p>Interested in volunteering?</p>
         <a href="https://venturekids.typeform.com/to/g0VcDj" target="_blank"><button>contact us</button></a>
-    </main>
+    </section>
 
-	<footer class="page-footer">
+	<footer class="page-footer page-footer__colourAdjust">
 		<div class="footer-content content-wrap">
 			<section class="footer__text">
 				<h3>VENTUREKIDS</h3>
@@ -110,17 +109,8 @@
 				</ul>
 			</section>
 		</div>
-	</footer>
-</div>
-
-
-
-  </div>
-
-</div>
-
-
-<!-- <script src="./src/js/main.js"></script> -->
-
+  </footer>
+  <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+  <script src="./src/js/main.js"></script>
 </body>
 </html>

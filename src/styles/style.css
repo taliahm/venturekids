@@ -69,6 +69,10 @@ header {
 
 header nav {
   background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
 }
 
 header h1 {
@@ -763,8 +767,8 @@ text-transform: uppercase;
   padding: 0 1em;
 }
 
- form{
-display:none;
+form{
+  display:none;
  }
 
 .signup {
@@ -977,11 +981,39 @@ nav{
   margin-right: 0.5rem;
 }
 
+#mobileNav {
+  display: none;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+#mobileNav .fas {
+  font-size: 24px;
+  color: black;
+  transition: all 0.3s ease-out;
+}
+
+#mobileNav:hover .fas {
+  color: #4DA5F0;
+}
+
+.nav__list-mobile {
+  flex-direction: column;
+}
+
+.nav__list.nav__list-mobile li {
+  border-right: none;
+  padding: 10px 0;
+}
+
 .nav__list li {
   border-right: 1px solid;
 }
 
-.nav__list li:first-of-type,
+/* .nav__list li:first-of-type, */
 .nav__list li:nth-last-child(2), 
 .nav__list li:last-of-type  {
   border-right: 0;
@@ -998,7 +1030,7 @@ nav{
 }
 
 .nav__logo-item {
-  flex-grow: 1;
+  margin-left: 20px;
 }
 
 .nav__logo-item img{
@@ -1117,7 +1149,7 @@ nav{
 }
 
 #overlays_about {
-    background-image: url('./../../assets/images/volunteers.jpg');
+    background-image: linear-gradient(0deg, rgba(27, 43, 77, 0.3), rgba(27, 43, 77, 0.6)), url('./../../assets/images/volunteers.jpg');
     background-position: center;
     background-size: cover;
     position:relative;
@@ -1289,9 +1321,12 @@ color: var(--color-accent-dark);
 
 */
 
-li .hold-logo-title {
+.hold-logo-title {
   display: flex;
   align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 /* base styling from partner class */
@@ -1366,6 +1401,10 @@ li .hold-logo-title {
 
 */
 
+.about--partner {
+  margin: 100px 0 210px 0;
+}
+
 .our-mission__header {
   text-decoration: underline;
   font-size: 3em;
@@ -1392,6 +1431,24 @@ li .hold-logo-title {
   position: relative;
 }
 
+.volunteer-descriptions.program_descriptions {
+  text-align: center;
+  width: 100%;
+}
+p.program_descriptions.volunteer_descriptions {
+  text-align: center;
+  width: 100%;
+}
+
+section.volunteer-section.program-page {
+  margin-top: 220px;
+  margin-bottom: 80px;
+}
+
+section.signup.signup-volunteer {
+  margin-top: 240px;
+}
+
 .volunteer__profile-image {
   height: auto;
   max-width: 10em;
@@ -1399,8 +1456,6 @@ li .hold-logo-title {
 }
 
 .become-volunteer__section {
-/*  background: var(--color-bg-light);*/
-/*  margin: 6em 0;*/
   padding: 6em 0;
   text-align: left;
 }
@@ -1447,9 +1502,9 @@ li .hold-logo-title {
 
 
 @media screen and (max-width: 800px) { 
-  body {
+  /* body {
     background: green;
-  }
+  } */
   .menu__link svg{
         width: calc(100% + 500px);
     }
@@ -1475,9 +1530,9 @@ li .hold-logo-title {
 
 
 @media screen and (max-width: 500px) { 
-  body {
+  /* body {
     background: purple;
-  }
+  } */
    h1 {
     font-size: 4.5em;
     line-height: 1em
@@ -1513,13 +1568,6 @@ li .hold-logo-title {
   margin: 0em 0em 3em; 
 }
 
-/* .programs-image_tell {
-    margin-bottom: 2em;
-    float: none;
-    height: 210px;
-    width: 220px;
-} */
-
 .programs-image_explain{
   height: 200px;
   width: 210px;
@@ -1546,21 +1594,45 @@ li .hold-logo-title {
   .signup button {
       font-size: 1.3em;
   }
+
+  .partner__list__lessons {
+    align-items: center;
+  }
+
+  .partner__list__lessons li {
+    margin: 20px 0;
+  }
 } /* End 500px media query*/
 
 @media screen and (max-width: 600px) { 
-  body {
+  /* body {
     background: orange;
-  }
+  } */
   .menu__link svg{
     width: calc(100% + 200px);
   }
   .nav__list {
-    font-size: 1.0em;
-  }
-  .nav__logo-item {
     display: none;
   }
+  .desktop-nav {
+    position: relative;
+  }
+  .nav__list.show {
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: white;
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+    z-index: 11;
+  }
+  /* .nav__list.hide {} */
+  #mobileNav {
+    display: block;
+  }
+
   .programs__image, form {
     max-width: 90%;
   }
@@ -1648,9 +1720,9 @@ li .hold-logo-title {
 } /* end 600px media query*/
 
 @media screen and (max-width: 380px) { 
-  body {
+  /* body {
     background: blue;
-  }
+  } */
 
   .programs-image_about img {
     max-width: 60%;
@@ -1682,6 +1754,10 @@ li .hold-logo-title {
 
   .partner__logo-item_points {
     width: 50%;
+  }
+
+  .partner__logo-item--small.partner__logo-item img {
+    max-width: 40%;
   }
 } /* end 380px media query */
 
