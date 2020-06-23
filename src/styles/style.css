@@ -484,8 +484,8 @@ BOX LAYOUT
 */
 
 
-.partner{
-  margin-top:5em;
+.partner {
+  margin: 210px 0;
 }
 
 .partners{
@@ -744,7 +744,7 @@ text-transform: uppercase;
 
 .program-page, 
 .volunteer-page {
-  padding-top: 10em;
+  /* padding-top: 10em; */
   margin-bottom: 170px;
 }
 
@@ -769,10 +769,43 @@ display:none;
 
 .signup {
   text-align: center;
-  /* margin-top: 170px; */
-  /* margin-bottom: 170px; */
-  background: #4DA5F0;
   padding: 70px 0;
+}
+
+.diagonal {
+  position: relative;
+  background-color: #f7f7f7;
+}
+
+.diagonal:before, .diagonal-up:after {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20height=%22250%22%20width=%221900%22%20fill=%27rgb(247,247,247)%27%20fill-opacity=%221%22%3E%3Cpolygon%20points=%220,250%201900,250%200,0%22%3E%3C/polygon%3E%3C/svg%3E");
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: '';
+  height: 250px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: -1;
+  top: -250px;
+}
+.diagonal:after, .diagonal-up:before {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20height=%22250%22%20width=%221900%22%20fill=%27rgb(247,247,247)%27%20fill-opacity=%221%22%3E%3Cpolygon%20points=%220,0%201900,250%201900,0%22%3E%3C/polygon%3E%3C/svg%3E");
+  background-position: center center;
+  background-repeat: no-repeat;
+  content: '';
+  height: 250px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: -1;
+  bottom: -250px;
+}
+
+.diagonal-up {
+  position: relative;
 }
 
 .signup p{
@@ -908,14 +941,6 @@ position: relative;
 .venture-code {
   /* margin: 20px 0 0 0; */
   padding: 70px 0;
-}
-
-.venture-code__green {
-  background: #2BA48B ;
-}
-
-.venture-code__yellow {
-  background: #EEB353;
 }
 
 .venture-code h2 {
@@ -1199,7 +1224,7 @@ color: var(--color-accent-dark);
 .testominals{
   text-align: left;
   max-width: 200em;
-  padding: 0 60px;
+  padding: 130px 60px;
   margin-top: 100px;
 }
 
@@ -1281,6 +1306,25 @@ color: var(--color-accent-dark);
   PROGRAMS PAGE
 
 */
+.partner.skills {
+  margin: 100px 0;
+}
+.hover-item {
+  cursor: pointer;
+  text-align: center;
+}
+.hover-item p.hidden-description {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  position: relative;
+  bottom: -20px;
+  text-transform: none;
+}
+
+.hover-item:hover p.hidden-description {
+  opacity: 1;
+  bottom: 0;
+}
 
 
 .program-icon-list {
@@ -1502,7 +1546,7 @@ width: 230px;
 .partner__list__lessons{
       display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     text-align: center;
 }
 
@@ -1609,3 +1653,4 @@ width: 230px;
     height: 1.2em;
   }
 }
+
