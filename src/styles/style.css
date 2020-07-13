@@ -504,7 +504,7 @@ font-size: 1.5em;
 
 .partner__list {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   text-align: center;
 /*  padding: 3em 0;*/
@@ -639,13 +639,16 @@ text-transform: uppercase;
 .partner__logo-item img {
   /* height: 2em; */
   max-width: 80%;
+  max-width: 120px;
+  width: 100%;
 }
-.partner__logo-item_lyft img {
+/* .partner__logo-item_lyft img {
   max-width: 70%
-}
+} */
 
 .partner__logo-item--small img {
-  max-width: 40%
+  max-width: 40%;
+  max-width: 100px;
 }
 
 /*.partner__logo-item_points img{
